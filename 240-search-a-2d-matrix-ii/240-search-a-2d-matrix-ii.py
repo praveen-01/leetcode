@@ -12,6 +12,8 @@ class Solution:
                 else:
                     l=m+1
             return False
+        if len(matrix)==0 or len(matrix[0])==0:
+            return False
         for row in matrix:
             res=search(row,target)
             if res:
