@@ -2,6 +2,8 @@ class Solution:
     def searchMatrix(self, matrix: List[List[int]], target: int) -> bool:
         h=len(matrix)
         w=len(matrix[0])
+        if h==0 or w==0:
+            return False
         y=h-1
         x=0
         while True:
