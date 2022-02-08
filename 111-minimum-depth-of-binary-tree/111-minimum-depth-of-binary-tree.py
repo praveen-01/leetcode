@@ -8,23 +8,20 @@ class Solution:
     def minDepth(self, root: Optional[TreeNode]) -> int:
         if not root:
             return 0
-        r=1
         st=[]
+        le=[]
         st.append(root)
-        lev=[]
+        r=1
         while st:
-            for k in st:
-                if k.left==None and k.right==None:
+            for root in st:
+                if root.left==None and root.right==None:
                     return r
-                if k.left:
-                    lev.append(k.left)
-                if k.right:
-                    lev.append(k.right)
+                if root.left:
+                    le.append(root.left)
+                if root.right:
+                    le.append(root.right)
             r+=1
-            st=lev
-            lev=[]
-            
-        
-                    
+            st=le
+            le=[]
             
         
